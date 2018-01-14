@@ -9,28 +9,28 @@
   <ion-card *ngFor="let lista of _listaDeseos.listas">
 
     <ion-item>
-      BOTON!!
+      <h2>&nbsp;{{ lista.nombre }}</h2>
     </ion-item>
-
-    <h2>{{ lista.nombre }}</h2>
 
     <ion-list>
       <ion-item>
-        <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle"></ion-icon>
+        <ion-icon ios="ios-arrow-dropleft-circle" md="md-arrow-dropleft-circle"></ion-icon>
         Tetris
       </ion-item>
       <ion-item>
-        <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle"></ion-icon>
+        <ion-icon ios="ios-arrow-dropleft-circle" md="md-arrow-dropleft-circle"></ion-icon>
         Pacman
       </ion-item>
       <ion-item>
-        <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle"></ion-icon>
+        <ion-icon ios="ios-arrow-dropleft-circle" md="md-arrow-dropleft-circle"></ion-icon>
         Donkey Kong
       </ion-item>
     </ion-list>
   </ion-card>
 
   <ion-fab right bottom>
-    <button ion-fab color="primary"><ion-icon name="arrow-dropleft"></ion-icon></button>
+    <button ion-fab color="primary" (click)="irAgregar()">
+      <ion-icon ios="ios-add" md="md-add"></ion-icon>
+    </button>
   </ion-fab>
 </ion-content>
