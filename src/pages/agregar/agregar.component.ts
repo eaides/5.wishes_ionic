@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Lista, ListaItem} from '../../app/classes/index';
 import { AlertController, NavController } from 'ionic-angular';
-import { ListaDeseosServiceService } from '../../app/services/lista-deseos.service';
+import { ListaDeseosService } from '../../app/services/lista-deseos.service';
 
 @Component({
   selector: 'app-agregar',
@@ -18,7 +18,7 @@ export class AgregarComponent implements OnInit {
   constructor(
     public alertCtrl: AlertController,
     public navCtrl: NavController,
-    private _listaDeseos: ListaDeseosServiceService
+    private _listaDeseos: ListaDeseosService
   ) {
   }
 

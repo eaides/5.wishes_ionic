@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import { Lista } from '../classes/listas';
 
 @Injectable()
-export class ListaDeseosServiceService {
+export class ListaDeseosService {
 
   listas: Lista[] = [];
 
@@ -26,4 +26,8 @@ export class ListaDeseosServiceService {
     this.actualizarDataToLS();
   }
 
+  eliminarLista(idx: number) {
+    this.listas.splice(idx,1);
+    this.actualizarDataToLS();
+  }
 }

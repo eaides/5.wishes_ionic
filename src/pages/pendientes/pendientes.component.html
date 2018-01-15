@@ -6,10 +6,12 @@
 
 <ion-content padding>
 
-  <ion-card *ngFor="let lista of _listaDeseos.listas">
+  <ion-card *ngFor="let lista of _listaDeseos.listas; let i = index"
+      (click)="verDetalle(lista, i)"
+  >
 
     <ion-item color="dark">
-      <h2>&nbsp;{{ lista.nombre }}</h2>
+      {{ lista.nombre }}
       <ion-note item-right>
         {{ lista.items.length }} items
       </ion-note>
@@ -22,7 +24,8 @@
         {{ oneitem.nombre }}
       </ion-item>
       <ion-item *ngIf="lista.items.length > 2" class="text-center">
-        <ion-icon color="primary" ios="ios-arrow-dropdown-circle" md="md-arrow-dropdown-circle"></ion-icon>
+        <ion-icon color="primary" ios="ios-arrow-dropdown-circle" md="md-arrow-dropdown-circle">
+        </ion-icon>
       </ion-item>
     </ion-list>
   </ion-card>
