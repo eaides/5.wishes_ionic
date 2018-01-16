@@ -23,7 +23,10 @@ export class PendientesComponent implements OnInit {
     this._navCtrl.push(AgregarComponent);
   }
 
-  verDetalle(lista:Lista, idx:number) {
+  verDetalle(lista:Lista, idx:number, idx_from_full:number) {
+    if (idx_from_full >= 0) {
+      idx = idx_from_full;
+    }
     this._navCtrl.push(DetalleComponent, { lista,idx })
   }
 }
